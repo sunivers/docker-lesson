@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  soyoung:
+    build:
+      dockerfile: ./my.dockerfile
+      context: .
+    ports:
+      - 8080:8080
