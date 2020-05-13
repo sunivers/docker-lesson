@@ -1,0 +1,52 @@
+docker history sample-app:latest
+이미지가 어떻게 빌드됐는지 볼 수 있다.
+
+docker container ls -a
+이전에 돌렸던 컨테이너 기록들 출력
+
+-it 인터렉션 옵션
+
+한번만 이미지 돌려도 컨테이너 기록에 남게된다.
+한번에 삭제하는 커맨드
+docker container prune
+이미지도 삭제 가능
+docker image prune
+
+쓸모없는 컨테이너 기록을 남기지 않고 실행하려면 --rm 옵션 추가
+docker run --rm -it ubuntu:18.04 /bin/bash
+
+빌드된 이미지를 컨테이너로 실행
+docker container exec -it b435 /bin/sh
+
+어떤 프로세스가 돌고 있는지 확인
+docker container top b435
+
+내가 돌리고 있는 프로세스가 어떤 자원을 소모하고 있는지 확인
+docker container ps
+
+docker build -t sample-app:latest -f my.dockerfile .
+
+도커 정보 명령어
+docker info
+
+-d detach옵션 쓸데없는거 제거하고 실행만 하겟다
+-p 8080포트를 내 컴퓨터의 8080포트에 개방하겠다
+docker run -d -p 8080:8080 sample-app:latest
+
+
+touch docker-compose.yaml
+
+도커 실행시 커맨드가 너무 많아서 그걸 한 파일로 관리하려고 합쳐놓은게 위에 compose 파일이다.
+docker build -f ./my.dockerfile -t soyoung:latest .
+docker run -d -p 8080:8080 soyoung:latest
+
+compose 파일이 발전해서 나온게 오케스트레이션
+
+docker-compose $파일명 up 
+compose 파일 실행
+
+docker-compose $파일명 down
+올렸던거 내리기
+
+mediawiki 접속해서
+
