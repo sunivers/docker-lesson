@@ -53,10 +53,6 @@ compose 파일이 발전해서 나온게 오케스트레이션
         - 8080:8080
   ```
 
-- `docker build -f ./my.dockerfile -t $서비스명:latest .`
-- `docker run -d -p 8080:8080 $서비스명:latest`
-
-
 - compose 파일 실행
 `docker-compose $파일명 up`
 
