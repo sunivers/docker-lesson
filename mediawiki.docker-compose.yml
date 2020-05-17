@@ -12,7 +12,7 @@ services:
     links:
       - database
     volumes:
-      - mediawiki:/var/www/html/images
+      - /var/www/html/images
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart
       # the mediawiki service
@@ -27,5 +27,6 @@ services:
       MYSQL_PASSWORD: example
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
 
-  volumes:
-    mediawiki:
+# 외부에 노출되는 volume 디렉토리
+volumes:
+  mediawiki:
