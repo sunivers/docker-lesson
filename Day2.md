@@ -61,8 +61,9 @@ compose 파일이 발전해서 나온게 오케스트레이션
 
 
 ### mediawiki 실습
-- mediawiki - compose의 우수한 예제
-- mediawiki.docker-compose.yaml 파일 생성 후 https://hub.docker.com/_/mediawiki의 'Example stack.yml for mediawiki:' 내용 이용
+compose의 우수한 예제
+- mediawiki 이미지 받기 `docker pull mediawiki`
+- mediawiki.docker-compose.yaml 파일 생성 후 [여기](https://hub.docker.com/_/mediawiki)에서 'Example stack.yml for mediawiki:' 내용 이용
 
 - 실행 및 종료
   - docker-compose -f mediawiki.docker-compose.yaml up (실행)
